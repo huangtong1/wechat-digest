@@ -266,7 +266,11 @@ if __name__ == '__main__':
     group_username = find_group_username(args.group_name)
     if not group_username:
         # 可在此添加已知群的硬编码映射
-        known = {}
+        known = {
+            "开眼看世界": "43853502840@chatroom",
+            "一起吃🐔吧": "6985884398@chatroom",
+            "汪保来🌈": "39110271461@chatroom",
+        }
         group_username = known.get(args.group_name)
     if not group_username:
         print(f"找不到群「{args.group_name}」", file=sys.stderr)
